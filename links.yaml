@@ -1,0 +1,5 @@
+---
+addr: 0.0.0.0:5636
+mode: debug
+short:
+  go2generics: "https://docs.google.com/presentation/d/1OurEtIXVozrYsFKMQQJA-utpDnpGDuKF268ly7RaiCA/edit?usp=sharing"
