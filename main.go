@@ -28,7 +28,7 @@ const (
 func main() {
 	r := gin.Default()
 	r.NoRoute(func(c *gin.Context) {
-		c.Redirect(404, home404)
+		c.Redirect(http.StatusPermanentRedirect, home404)
 	})
 	r.GET("/s/:short", handleShortLinks)
 	logrus.Infof("changkun.de/s/ is running at: http://%s", conf.Addr)
