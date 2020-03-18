@@ -20,12 +20,15 @@ import (
 // 1. reload config if changed -- not hurry.
 // 2. statistics
 
-const home = "https://changkun.de"
+const (
+	home    = "https://changkun.de"
+	home404 = "https://changkun.de/404.html"
+)
 
 func main() {
 	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{"message": "pong"})
+	r.NoRoute(func(c *gin.Context) {
+		c.Redirect(404, home404)
 	})
 	r.GET("/s/:short", handleShortLinks)
 	logrus.Infof("changkun.de/s/ is running at: http://%s", conf.Addr)
@@ -79,7 +82,7 @@ func handleShortLinks(c *gin.Context) {
 	s := c.Param("short")
 	v, ok := conf.Short[s]
 	if !ok {
-		c.Redirect(http.StatusTemporaryRedirect, "https://changkun.de/404.html")
+		c.Redirect(http.StatusTemporaryRedirect, home404)
 	}
 	c.Redirect(http.StatusTemporaryRedirect, v)
 }
