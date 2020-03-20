@@ -16,10 +16,6 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-// TODO:
-// 1. reload config if changed -- not hurry.
-// 2. statistics
-
 const (
 	home    = "https://changkun.de"
 	home404 = "https://changkun.de/404.html"
@@ -75,6 +71,11 @@ func init() {
 		os.Exit(1)
 	}
 
+	stat.links = map[string]*metric{}
+	for k := range conf.Short {
+		stat.init(k)
+	}
+	stat.start()
 	gin.SetMode(conf.Mode)
 }
 
@@ -84,5 +85,6 @@ func handleShortLinks(c *gin.Context) {
 	if !ok {
 		c.Redirect(http.StatusTemporaryRedirect, home404)
 	}
+	stat.inc(s, c.ClientIP())
 	c.Redirect(http.StatusTemporaryRedirect, v)
 }

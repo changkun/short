@@ -1,5 +1,10 @@
+# Copyright 2020 Changkun Ou. All rights reserved.
+# Use of this source code is governed by a GPLv3
+# license that can be found in the LICENSE file.
+
 ---
 addr: 0.0.0.0:5636
 mode: debug
 short:
   go2generics: "https://docs.google.com/presentation/d/1OurEtIXVozrYsFKMQQJA-utpDnpGDuKF268ly7RaiCA/edit?usp=sharing"
+  gobench: "https://docs.google.com/presentation/d/1x9aAyUbkNpi4OAEHMb5KOmLDDXLbUWui6YaAhf5iKxQ/edit?usp=sharing"
