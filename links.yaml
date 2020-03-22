@@ -7,6 +7,7 @@ addr: 0.0.0.0:5636
 mode: debug
 short:
   chansrc: "https://docs.google.com/presentation/d/18_9LcMc8u93aITZ6DqeUfRvOcHQYj2gwxhskf0XPX2U/edit?usp=sharing"
+  conbugs: "https://docs.google.com/presentation/d/1clppbBqjxzPrj-26d_zVeJK2fFiXCsNVXYhKPjEZ4Tc/edit?usp=sharing"
   csp: "https://docs.google.com/presentation/d/1N5skL6vR9Wxk-I82AYs3dlsOsJkUAGJCsb5NGpXWpqo/edit?usp=sharing"
   timer114: "https://docs.google.com/presentation/d/1c2mRWA-FiihgpbGsE4uducou7X5d4WoiiLVab-ewsT8/edit?usp=sharing"
   go2generics: "https://docs.google.com/presentation/d/1OurEtIXVozrYsFKMQQJA-utpDnpGDuKF268ly7RaiCA/edit?usp=sharing"
